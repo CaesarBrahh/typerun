@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typing Rush</title>
+
+  <!-- Link to your CSS file -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Optional: nice clean default font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Game container -->
+  <div id="game">
+    <h1 class="game-title">Type Rush</h1>
+
+    <!-- Game stats -->
+    <div class="game-stats">
+      <div class="stat-item">
+        <span>Words Per Minute: </span>
+        <span id="score">0</span>
+      </div>
+      <div class="stat-item">
+        <span>Time: </span>
+        <span id="time">00:00.00</span>
+      </div>
+      <div class="stat-item">
+        <span>Words: </span>
+        <span id="words-cleared">0</span>
+      </div>
+    </div>
+
+    <!-- Area where the words will move -->
+    <div id="word-container"></div>
+
+    <!-- Player input -->
+    <div id="player-input"></div>
+
+    <!-- Instructions -->
+    <div class="instructions">
+      <p>Type the words before they reach the edge!</p>
+    </div>
+  </div>
+
+  <!-- Game Over Modal -->
+  <div id="game-over-modal" class="game-over" style="display: none;">
+    <div class="game-over-content">
+      <h2>Game Over!</h2>
+      <p>Words Cleared: <span id="final-words">0</span></p>
+      <p>Time: <span id="final-time">00:00.00</span></p>
+      <p>Words Per Minute: <span id="final-score">0</span></p>
+      <button class="restart-btn" onclick="restartGame()">Play Again</button>
+    </div>
+  </div>
+
+  <!-- Link to your JavaScript file -->
+  <script src="wordBank.js"></script>
+  <script src = "Word.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

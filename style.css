@@ -76,33 +76,13 @@ body {
     position: relative;
 }
 
-/* Ensure left/center/right alignment regardless of content width */
 .game-stats .stat-item:nth-child(1) {
     justify-self: start;
 }
 
-/* True centering: lock the middle stat to the exact horizontal center */
-.game-stats .stat-item:nth-child(2) {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-
-    /* Visually center the label + value so the number sits under the title */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-/* Make the label and value stack cleanly */
-.game-stats .stat-item:nth-child(2) span {
-    display: block;
-}
-
 .game-stats .stat-item:nth-child(3) {
     justify-self: end;
-}
+} 
 
 .stat-item {
     background: rgba(255, 255, 255, 0.1);
